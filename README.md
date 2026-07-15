@@ -5,102 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Donate Pliss // Halaman Donasi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#030812; --panel:#071022; --panel-2:#0b1830; --line:#123055;
-    --cyan:#35e6ff; --blue:#2f6fff; --dim:#4d7ba8; --text:#cfe8ff;
-    --ok:#23ff9d; --warn:#ffcf4d;
+    --bg:#f4f8ff; --panel:#ffffff; --panel-2:#eaf2ff;
+    --line:#d7e6ff; --blue:#2563eb; --blue-deep:#1d4ed8; --sky:#3b9dff;
+    --dim:#5b7796; --text:#1c2b3f; --ok:#0ea86b; --warn:#e0a300;
   }
   *{box-sizing:border-box;}
   body{
     margin:0; background:var(--bg); color:var(--text);
-    font-family:'JetBrains Mono', monospace;
+    font-family:'Inter', sans-serif;
   }
   .wrap{ max-width: 880px; margin:0 auto; padding: 36px 20px 70px; }
 
   header{
     border:1px solid var(--line);
-    background: linear-gradient(180deg, var(--panel), var(--bg));
-    border-radius:6px; padding: 26px 26px; margin-bottom: 30px;
-    position:relative; overflow:hidden;
+    background: linear-gradient(135deg, #ffffff, #eaf2ff);
+    border-radius:14px; padding: 30px 28px; margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.08);
   }
-  header::before{
-    content:""; position:absolute; top:0; left:0; right:0; height:2px;
-    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-    animation: sweep 3s linear infinite;
-  }
-  @keyframes sweep{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
-  .eyebrow{ font-family:'Share Tech Mono',monospace; color:var(--dim); font-size:12px; letter-spacing:3px; text-transform:uppercase; }
-  h1{ margin:6px 0 8px; font-size: clamp(26px,5vw,40px); color:#eaf6ff; text-shadow:0 0 14px rgba(53,230,255,.35); }
-  h1 span{ color:var(--cyan); }
-  .sub{ color:var(--dim); font-size:13.5px; line-height:1.7; max-width:620px; }
+  .eyebrow{ font-family:'Inter',sans-serif; color:var(--blue); font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; }
+  h1{ margin:8px 0 8px; font-family:'Poppins',sans-serif; font-weight:800; font-size: clamp(28px,5vw,42px); color:var(--blue-deep); }
+  h1 span{ color: var(--sky); }
+  .sub{ color:var(--dim); font-size:14px; line-height:1.7; max-width:620px; }
 
-  .stat-row{ display:flex; gap:14px; margin-top:20px; flex-wrap:wrap; }
+  .stat-row{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
   .stat{
-    flex:1; min-width:140px; background:var(--panel-2); border:1px solid var(--line);
-    border-radius:4px; padding:12px 14px;
+    flex:1; min-width:150px; background:var(--panel-2); border:1px solid var(--line);
+    border-radius:10px; padding:14px 16px;
   }
-  .stat .num{ color:var(--ok); font-size:18px; font-weight:700; }
-  .stat .lbl{ color:var(--dim); font-size:11px; letter-spacing:1px; text-transform:uppercase; }
+  .stat .num{ color:var(--blue-deep); font-size:17px; font-weight:700; font-family:'Poppins',sans-serif; }
+  .stat .lbl{ color:var(--dim); font-size:11px; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
   .section-title{
-    font-family:'Share Tech Mono',monospace; color:var(--cyan);
-    font-size:14px; letter-spacing:2px; text-transform:uppercase;
-    margin: 34px 0 14px; display:flex; align-items:center; gap:10px;
+    font-family:'Poppins',sans-serif; color:var(--blue-deep);
+    font-size:16px; font-weight:700;
+    margin: 34px 0 16px; display:flex; align-items:center; gap:10px;
   }
   .section-title::after{ content:""; flex:1; height:1px; background:var(--line); }
 
   .donor-card{
     border:1px solid var(--line); background:var(--panel);
-    border-radius:6px; padding:20px 22px; margin-bottom:18px;
-    position:relative; transition: border-color .25s, box-shadow .25s;
+    border-radius:12px; padding:20px 22px; margin-bottom:18px;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.06);
+    transition: box-shadow .25s, transform .2s;
   }
-  .donor-card:hover{ border-color: var(--blue); box-shadow: 0 0 20px rgba(47,111,255,.18); }
+  .donor-card:hover{ box-shadow: 0 8px 22px rgba(37,99,235,0.14); transform: translateY(-2px); }
 
   .donor-head{ display:flex; align-items:center; gap:12px; margin-bottom:12px; }
   .avatar{
     width:42px; height:42px; border-radius:50%;
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    background: linear-gradient(135deg, var(--blue), var(--sky));
     display:flex; align-items:center; justify-content:center;
-    font-weight:800; color:#001225; font-size:16px; flex-shrink:0;
+    font-weight:800; color:#fff; font-size:16px; flex-shrink:0;
+    font-family:'Poppins',sans-serif;
   }
-  .donor-name{ color:#eaf6ff; font-size:15.5px; font-weight:700; }
-  .donor-meta{ color:var(--dim); font-size:11.5px; letter-spacing:.5px; }
+  .donor-name{ color:var(--text); font-size:15.5px; font-weight:700; font-family:'Poppins',sans-serif; }
+  .donor-meta{ color:var(--dim); font-size:11.5px; letter-spacing:.3px; }
   .amount{
-    margin-left:auto; background:var(--panel-2); border:1px solid var(--ok);
-    color:var(--ok); font-size:12.5px; font-weight:700; padding:4px 12px; border-radius:20px;
+    margin-left:auto; background:#eafff5; border:1px solid var(--ok);
+    color:var(--ok); font-size:12.5px; font-weight:700; padding:5px 14px; border-radius:20px;
     white-space:nowrap;
   }
 
   .message{
-    font-size:13.5px; line-height:1.75; color:var(--text);
+    font-size:13.5px; line-height:1.8; color:var(--text);
     background:var(--panel-2); border-left:3px solid var(--blue);
-    padding:12px 14px; border-radius:3px;
+    padding:12px 14px; border-radius:6px;
   }
   .message a{
-    color:var(--cyan); word-break:break-all; text-decoration:none; border-bottom:1px dashed var(--cyan);
+    color:var(--blue-deep); word-break:break-all; text-decoration:none; border-bottom:1px dashed var(--blue-deep);
+    font-weight:500;
   }
-  .message a:hover{ color:#fff; border-bottom-color:#fff; }
+  .message a:hover{ color:var(--sky); border-bottom-color:var(--sky); }
 
   .clue-badge{
     display:inline-flex; align-items:center; gap:6px;
-    margin-top:10px; font-size:11px; letter-spacing:1px; text-transform:uppercase;
-    color:var(--warn); border:1px solid var(--warn); padding:3px 10px; border-radius:20px;
-    font-family:'Share Tech Mono',monospace;
+    margin-top:10px; font-size:11px; letter-spacing:.5px; text-transform:uppercase;
+    color:#8a5b00; background:#fff6e0; border:1px solid var(--warn); padding:4px 12px; border-radius:20px;
+    font-weight:600;
   }
 
   .cta-box{
     margin-top: 38px; text-align:center; border:1px dashed var(--line);
-    border-radius:6px; padding: 26px; color:var(--dim); font-size:13px;
+    background:var(--panel); border-radius:12px; padding: 28px; color:var(--dim); font-size:13.5px;
   }
   .cta-box button{
-    margin-top:12px; background:var(--blue); color:#001225; border:none;
-    font-weight:700; font-family:'JetBrains Mono',monospace; font-size:13px;
-    padding:10px 22px; border-radius:4px; cursor:pointer; letter-spacing:1px;
-    text-transform:uppercase;
+    margin-top:14px; background: linear-gradient(135deg, var(--blue), var(--sky)); color:#fff; border:none;
+    font-weight:700; font-family:'Poppins',sans-serif; font-size:13.5px;
+    padding:11px 26px; border-radius:24px; cursor:pointer; letter-spacing:.5px;
+    box-shadow: 0 6px 16px rgba(37,99,235,0.25);
   }
-  .cta-box button:hover{ background:var(--cyan); }
+  .cta-box button:hover{ box-shadow: 0 8px 20px rgba(37,99,235,0.35); }
 
   footer{ text-align:center; color:var(--dim); font-size:11.5px; margin-top:34px; }
 </style>
@@ -197,4 +194,3 @@
 </div>
 </body>
 </html>
-
