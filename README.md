@@ -184,6 +184,45 @@
     <div class="clue-badge">🔁 petunjuk: balik kata "Edo"</div>
   </div>
 
+  <!-- DONATUR 4 -->
+  <div class="donor-card">
+    <div class="donor-head">
+      <div class="avatar">H</div>
+      <div>
+        <div class="donor-name">Hendri</div>
+        <div class="donor-meta">Donatur #4</div>
+      </div>
+      <div class="amount">-</div>
+    </div>
+    <div class="message">
+      Aku mengirimkan ini untuk pesan terakhir dan ini adalah surat pembuktian:
+      <br>
+      <a href="https://ftn-cyber.github.io/Surat-terakhir/" target="_blank" rel="noopener noreferrer">
+        https://ftn-cyber.github.io/Surat-terakhir/
+      </a>
+    </div>
+  </div>
+
+  <!-- DONATUR 5 -->
+  <div class="donor-card">
+    <div class="donor-head">
+      <div class="avatar">H</div>
+      <div>
+        <div class="donor-name">Harmon zazi</div>
+        <div class="donor-meta">Donatur #5</div>
+      </div>
+      <div class="amount">$9.000</div>
+    </div>
+    <div class="message">
+      Aku mengirimkan 9000 dolar ini untuk Edo agar tidak menghadapi bahaya, dan ini adalah pembuktian
+      bahwa Edo dalam bahaya:
+      <br>
+      <a href="https://ftn-cyber.github.io/Black-board/" target="_blank" rel="noopener noreferrer">
+        https://ftn-cyber.github.io/Black-board/
+      </a>
+    </div>
+  </div>
+
   <div class="cta-box">
     Ingin ikut mendukung Donate Pliss?
     <br>
